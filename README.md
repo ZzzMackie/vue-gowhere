@@ -1,5 +1,6 @@
 # vue-gowhere
-a vue project
+
+> A Vue.js project
 
 ## Build Setup
 

@@ -3,7 +3,7 @@
     <el-container>
         <el-header class="header-container">
             <!-- Header content -->
-            <header-nav ></header-nav>
+            <header-nav :foo="foo" ref="hnav"></header-nav>
         </el-header>
         <nav-menu ></nav-menu>
         <el-main height="">
@@ -27,12 +27,16 @@ export default {
     name: 'Home',
     data() {
         return {
+            foo: true
         }
     },
     components: {
       FooterDown,
       HeaderNav,
       NavMenu
+    },
+    mounted () {
+        console.log(this.$refs.hnav.isopen)
     }
 }
 </script>
@@ -54,5 +58,8 @@ export default {
 }
 .el-footer{
     padding: 0;
+}
+.el-main{
+         padding: 0; 
 }
 </style>
